@@ -1,0 +1,207 @@
+body {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #5c738b 0%, #4560a3 100%);
+}
+
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #2c3e50 50%, #569ddf74 100%);
+    padding-top: 20px;
+    overflow-y: auto;
+    box-shadow: 2px 0 12px rgba(44,62,80,0.08);
+    scrollbar-width: thick;
+    scrollbar-color: #005bea;
+}
+
+.sidebar h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-shadow: 0 2px 8px #0097ce55;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 8px 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+}
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 10px 24px;
+    display: block;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    font-size: 1.08rem;
+    position: relative;
+}
+
+.sidebar ul li a:hover {
+    background-color: #2e63b3;
+    color: #fff;
+    box-shadow: 0 2px 8px #0097ce44;
+}
+
+.sidebar ul li a.active {
+    background: linear-gradient(90deg, #3986d7 0%, #ffffff 60%, #3986d7 100%);
+    color: #2c3e50;
+    font-weight: bold;
+    border: 1px solid #0c1e5d;
+    box-shadow: 0 2px 12px #0097ce33;
+    position: relative;
+}
+.sidebar ul li a.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 3px;
+    border-radius: 4px;
+    background: #152356;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 4px;
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 8px;
+    border: none;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 40px 40px;
+    background: linear-gradient(135deg, rgb(192, 217, 237) 0%, #b3e0ff 100%);
+    border-radius: 32px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
+    min-height: 90vh;
+    max-width: 2200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 18px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #0e0e19 0%, #111150 50%, #0097ce 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.content img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+    margin-bottom: 28px;
+    display: block;
+}
+
+.content p {
+    font-size: 1.15rem;
+    color: #34495e;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    background: #eaf6ff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #0097ce11;
+}
+
+.content h3 {
+    color: #030e21;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+}
+
+.content ul {
+    background: #f4f6fb;
+    border-radius: 12px;
+    padding: 18px 24px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.06);
+    margin-bottom: 24px;
+    font-size: 1.08rem;
+    color: #34495e;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 180px;
+    }
+    .content {
+        margin-left: 200px;
+        max-width: 100%;
+        padding: 24px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        padding-top: 10px;
+    }
+    .sidebar h2 {
+        font-size: 1.1rem;
+    }
+    .sidebar ul li a,
+    .sidebar ul li {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+    .content {
+        margin-left: 0;
+        margin-top: 10px;
+        border-radius: 12px;
+        padding: 16px 6px;
+        box-shadow: none;
+    }
+}
