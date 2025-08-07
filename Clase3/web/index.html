@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Perfil - Alexander de Leon</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Alexander de Leon</h1>
+    <img src="perfil.jpg" alt="Avatar" class="avatar">
+    <p>
+        Soy estudiante de Sistemas Informaticos.<br>
+        Me apasiona la tecnología y el aprendizaje constante.<br>
+        Disfruto trabajar en proyectos creativos y colaborativos.
+    </p>
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <td>Alexander de Leon</td>
+        </tr>
+        <tr>
+            <th>Edad</th>
+            <td>21 años</td>
+        </tr>
+        <tr>
+            <th>Carrera</th>
+            <td>Perito contador en Computacion</td>
+        </tr>
+        <tr>
+            <th>Correo</th>
+            <td>alexanderdeleon@gmail.com</td>
+        </tr>
+    </table>
+
+    <form id="contacto">
+        <h2>Contacto</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+       <center><button type="submit">Enviar</button></center>
+    </form>
+
+    <div class="botones">
+        <button onclick="cambiarColorFondo()">Cambiar color de fondo</button>
+        <button onclick="mostrarAlerta()">Mostrar alerta</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.contacto-container {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.contacto-container h1 {
+  font-size: 24px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+.contacto-card {
+  border: 1.5px solid #222;
+  border-radius: 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+.contacto-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px 32px 40px;
+  font-size: 1.4em;
+  font-weight: 600;
+  border-bottom: 1.5px solid #222;
+}
+
+.contacto-row:last-of-type {
+  border-bottom: 1.5px solid #222;
+}
+
+.contacto-icon {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.contacto-horario {
+  padding: 24px 20px 24px 20px;
+  font-size: 1.1em;
+  border-bottom: none;
+}
+
+.contacto-horario strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.contacto-horario-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 30px;
+}
+
+.contacto-horario-grid > div {
+  flex: 1;
+  text-align: center;
+  font-size: 1em;
+}
+
+.contacto-horario-nota {
+  font-size: 0.9em;
+  color: #444;
+  font-style: italic;
+  display: block;
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .contacto-container {
+    max-width: 98vw;
+    margin: 10px;
+  }
+  .contacto-row, .contacto-horario {
+    padding: 18px 6px;
+    font-size: 1em;
+  }
+  .contacto-horario-grid {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.banner {
+  width: 100%;
+  max-width: 1500px;
+  margin: 30px auto 0 auto;
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 4px 24px #0002;
+  letter-spacing: 100px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px 16px 0 0;
+}

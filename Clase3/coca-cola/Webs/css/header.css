@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap');
+
+.navbar {
+  background: #e41a1c ;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 2px 8px #e41a1c22;
+  max-width: 1300px;
+  margin: 30px auto 0 auto;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.4em;
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 1px;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 2px solid transparent;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.navbar a:hover:not(:has(.logo)) {
+  font-size: 1.5em;
+  color: #000;
+  border-bottom: 3px solid #000;
+  text-shadow: none;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: -5px;
+  margin-right: 90px;
+  margin-left: 50px;
+  vertical-align: middle;
+  border-bottom: none !important;
+  transition: none;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  gap: 56px;
+  margin-left: 150px;
+}
+
+.nav-list > li {
+  position: right;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  display: block;
+  margin-right: 30px;
+  padding: 1px 2px;
+  font-size: 1.300em;
+  color: #222;
+  border: none;
+  border-radius: 4px 4px 0 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  width: 100px; /* Fija el ancho, ajústalo a tu diseño */
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 0.8em;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(90deg);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #ffffff;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.10);
+  min-width: 150px; /* Igual al ancho del botón */
+  width: 100px;     /* Igual al ancho del botón */
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+  border-top: 3px solid #000;
+  animation: fadeIn 0.3s;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  width: 100%;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #e30f0f;
+  padding: 10px 10px;
+  font-size: 1.18em;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 400;
+  background: none;
+  border: none;
+  text-align: left;
+  transition: background 0.2s, color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-content a:hover {
+  background: #f7f7f7;
+  color: #c11b1d;
+  font-weight: 400; /* No cambia el peso para evitar que crezca */
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+  }
+  .logo {
+    width: 80px;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

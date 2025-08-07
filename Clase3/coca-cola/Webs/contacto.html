@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Soporte Técnico | Contacto</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <!-- Puedes usar Google Fonts para Montserrat -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <div id="header"></div>
+</head>
+
+<body>
+  <div class="contacto-container">
+    <h1>Soporte Técnico</h1>
+    <div class="contacto-card">
+      <div class="contacto-row">
+        <span class="contacto-text">Llama al PBX 1735</span>
+        <span class="contacto-icon">
+          <img src="icon\telefono.png" alt="icono de contacto" width="36" height="36">
+            <circle cx="18" cy="18" r="18" fill="#e41a1c"/>
+            <path d="M16.707 15.293l-2.387-2.387a1 1 0 0 0-1.414 0l-.293.293a8.014 8.014 0 0 1-3.293-3.293l.293-.293a1 1 0 0 0 0-1.414l-2.387-2.387a1 1 0 0 0-1.414 0l-.586.586c-.781.781-.781 2.047 0 2.828 2.343 2.343 5.657 5.657 8 8 .781.781 2.047.781 2.828 0l.586-.586a1 1 0 0 0 0-1.414z" fill="#fff"/>
+          </svg>
+        </span>
+      </div>
+      <div class="contacto-row">
+        <span class="contacto-text">Escríbenos por WhatsApp 3256-0055</span>
+        <span class="contacto-icon">
+               <img src="icon\whatsapp.png" alt="icono de contacto" width="36" height="36">
+            <circle cx="18" cy="18" r="18" fill="#e41a1c"/>
+            <path d="M16.707 15.293l-2.387-2.387a1 1 0 0 0-1.414 0l-.293.293a8.014 8.014 0 0 1-3.293-3.293l.293-.293a1 1 0 0 0 0-1.414l-2.387-2.387a1 1 0 0 0-1.414 0l-.586.586c-.781.781-.781 2.047 0 2.828 2.343 2.343 5.657 5.657 8 8 .781.781 2.047.781 2.828 0l.586-.586a1 1 0 0 0 0-1.414z" fill="#fff"/>
+          </svg>
+        </span>
+      </div>
+      <div class="contacto-horario">
+        <strong>Horario de atención.</strong>
+        <div class="contacto-horario-grid">
+          <div>
+            <strong>Lunes a Viernes.</strong><br>
+            8:00am a 5:00pm
+          </div>
+          <div>
+            <strong>Sábados de</strong><br>
+            8:00am a 12:00pm<br>
+            <span class="contacto-horario-nota">“excepción de días festivos” de lunes a viernes.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+        // Cargar el script del menú después de insertar el header
+        var script = document.createElement('script');
+        script.src = '../Scripts/menu.js';
+        document.body.appendChild(script);
+      })
+      .catch(error => console.error('Error al cargar el header:', error));
+  </script>
+  <div id="footer"></div>
+  <script>
+    // Cargar el footer   // Cargar el footer
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+
+    // Aquí va el código del newsletter, porque el footer ya está en el DOM
+    const form = document.getElementById('newsletterForm');
+    const email = document.getElementById('newsletterEmail');
+    const success = document.getElementById('newsletterSuccess');
+    const againBtn = document.getElementById('newsletterAgain');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      success.style.display = 'block';
+    });
+
+    againBtn.addEventListener('click', function() {
+      form.reset();
+      form.style.display = 'flex';
+      success.style.display = 'none';
+      email.focus();
+    });
+  })
+  .catch(error => console.error('Error al cargar el footer:', error));
+  </script>
+</body>
+
+</html>

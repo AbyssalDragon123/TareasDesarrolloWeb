@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsabilidad Social | Coca-Cola</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/responsabilidad.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <section class="rs-section">
+      <h1>Responsabilidad Social</h1>
+
+      <!-- Reciclaje -->
+      <div class="rs-block">
+        <img src="img/reciclaje.jpeg" alt="Reciclaje Coca-Cola">
+        <div class="rs-block-content">
+          <h2>Compromiso con el Reciclaje</h2>
+          <p>
+            Coca-Cola impulsa la iniciativa <b>“Un Mundo sin Residuos”</b>, cuyo objetivo es recolectar y reciclar el equivalente al 100% de los envases que pone en el mercado para 2030. El 98% de los materiales de nuestros empaques ya son reciclables.
+          </p>
+          <p>
+            Además, promovemos la educación ambiental en comunidades y escuelas, y colaboramos con organizaciones para mejorar los sistemas de reciclaje en Guatemala y toda Latinoamérica.
+          </p>
+        </div>
+      </div>
+
+      <!-- Campañas sociales/ambientales -->
+      <div class="rs-block">
+        <div class="rs-block-content">
+          <h2>Campañas Sociales y Ambientales</h2>
+          <p>
+            Apoyamos proyectos de acceso a agua potable, empoderamiento femenino y desarrollo de comunidades. Nuestra campaña <b>“Agua para el Futuro”</b> ha beneficiado a miles de personas en zonas rurales.
+          </p>
+          <p>
+            También realizamos jornadas de limpieza de playas y ríos, y promovemos el consumo responsable y la vida activa a través de eventos deportivos y culturales.
+          </p>
+        </div>
+        <img src="img/campana-social.png" alt="Campaña Social Coca-Cola">
+      </div>
+
+      <!-- Video institucional -->
+      <div class="rs-block">
+  <iframe 
+    width="320" 
+    height="180" 
+    src="https://www.youtube.com/embed/6__R1tUOXTw" 
+    title="Sostenibilidad en Coca-Cola" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen
+    style="border-radius:14px; box-shadow:0 2px 12px #0001; background:#fff;">
+  </iframe>
+  <div class="rs-block-content">
+    <h2>Video: Sostenibilidad en Coca-Cola</h2>
+    <p>
+      Descubre cómo Coca-Cola está transformando su cadena de valor para ser más sostenible y responsable con el planeta.
+    </p>
+  </div>
+</div>
+
+      <!-- Enlaces externos -->
+      <div class="rs-block">
+        <div class="rs-block-content">
+          <h2>Enlaces y Recursos Externos</h2>
+          <p>
+            Conoce más sobre nuestras acciones y compromisos en responsabilidad social y ambiental:
+          </p>
+          <div class="rs-links">
+            <a class="rs-link" href="https://www.coca-cola.com/gt/es/sustainability" target="_blank">Sustentabilidad Coca-Cola Guatemala</a>
+            <a class="rs-link" href="https://coca-colafemsa.com/sostenibilidad/información-general-de-sostenibilldad.html" target="_blank">Coca-Cola Global Sustainability</a>
+            <a class="rs-link" href="https://www.cocacolaep.com/es/sostenibilidad" target="_blank">The Coca-Cola Foundation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => { document.getElementById('header').innerHTML = data; });
+
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => { document.getElementById('footer').innerHTML = data; });
+  </script>
+</body>
+</html>

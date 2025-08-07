@@ -1,0 +1,200 @@
+.slogan-banner {
+  background: #e41a1c;
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  padding: 40px;
+  margin: 0 auto 40px auto;
+  max-width: 700px;
+  border-radius: 0 0 8px 8px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  box-shadow: 0 2px 12px #0002;
+  letter-spacing: 0.5px;
+}
+
+.mv-section {
+  background: #fff;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.mv-section-alt {
+  background: #f5f5f5;
+}
+
+.mv-block {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mv-img {
+  flex: 1 1 260px;
+  max-width: 320px;
+  min-width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mv-img img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px #0002;
+  transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.mv-img img:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 8px 32px #e41a1c55;
+}
+
+.mv-text {
+  flex: 2 1 320px;
+  min-width: 220px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.mv-text h3 {
+  font-size: 1.5em;
+  color: #444;
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.mv-text p {
+  font-size: 1.15em;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+  position: relative;
+}
+
+.mv-bar {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3px;
+  height: 1.2em;
+  background: #e41a1c;
+  margin-right: 10px;
+  border-radius: 2px;
+}
+
+.galeria {
+  max-width: 1100px;
+  margin: 48px auto 56PX auto;
+  padding: 0 20px;
+}
+
+.galeria h2 {
+  color: #e41a1c;
+  font-size: 2em;
+  margin-bottom: 18px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.galeria-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+
+.galeria-imagenes img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0001;
+  background: #fff;
+  transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.galeria-imagenes img:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 8px 32px #e41a1c55;
+}
+
+@media (max-width: 900px) {
+  .mv-block {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+  .mv-img, .mv-text {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .slogan-banner {
+    font-size: 1.2em;
+    padding: 16px 4px;
+  }
+  .galeria-imagenes img {
+    width: 100%;
+    height: 180px;
+    
+  }
+}
+/* Animación de aparición */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(.4,2,.6,1), transform 0.8s cubic-bezier(.4,2,.6,1);
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.proposito-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px; /* Espacio entre menú y banner */
+  margin-bottom: 32px;
+}
+
+.proposito-title {
+  color: #4d4d4d;
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+  opacity: 0;
+  transform: translateX(-120px);
+  animation: propositoIn 1.6s cubic-bezier(.4,2,.6,1) 0.2s forwards;
+  /* 1.6s de duración, 0.2s de retraso */
+}
+
+@keyframes propositoIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Ajusta el banner para que esté separado y centrado */
+.slogan-banner {
+  background: #e41a1c;
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  padding: 24px 10px;
+  margin: 0 auto;
+  max-width: 700px;
+  border-radius: 0 0 12px 12px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  box-shadow: 0 2px 12px #0002;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+}

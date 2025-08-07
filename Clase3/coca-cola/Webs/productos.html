@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos | Coca-Cola</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/productos.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <section class="productos-section">
+      <h1>Nuestros Productos</h1>
+
+      <!-- Categoría: Bebidas -->
+      <h2 class="categoria-titulo">Bebidas</h2>
+      <div class="carousel-container">
+        <button class="carousel-btn left" onclick="moverCarrusel(this, -1)">&#8592;</button>
+        <div class="carousel-track">
+          <div class="producto-card"><img src="img/coca-cola-original.webp" alt="Coca-Cola Original"><h3>Coca-Cola Original</h3><p>La bebida refrescante más famosa del mundo.</p><span class="precio">Q8.00</span></div>
+          <div class="producto-card"><img src="img/fanta-naranja.webp" alt="Fanta Naranja"><h3>Fanta Naranja</h3><p>Refresco con sabor a naranja.</p><span class="precio">Q7.50</span></div>
+          <div class="producto-card"><img src="img/sprite.jpg" alt="Sprite"><h3>Sprite</h3><p>Refresco de lima-limón.</p><span class="precio">Q7.50</span></div>
+          <div class="producto-card"><img src="img/agua-cristal.jpg" alt="Agua Cristal"><h3>Agua Cristal</h3><p>Agua pura y refrescante.</p><span class="precio">Q5.00</span></div>
+          <div class="producto-card"><img src="img/fresca.webp" alt="Fresca"><h3>Fresca</h3><p>Refresco cítrico, sin calorías.</p><span class="precio">Q7.00</span></div>
+          <div class="producto-card"><img src="img/kinley.webp" alt="Kinley"><h3>Kinley</h3><p>Agua tónica premium.</p><span class="precio">Q8.00</span></div>
+          <div class="producto-card"><img src="img/limonada.webp" alt="Limonada"><h3>Limonada</h3><p>Bebida de limón natural.</p><span class="precio">Q6.50</span></div>
+        </div>
+        <button class="carousel-btn right" onclick="moverCarrusel(this, 1)">&#8594;</button>
+      </div>
+
+      <!-- Categoría: Dietéticas -->
+      <h2 class="categoria-titulo">Dietéticas</h2>
+      <div class="carousel-container">
+        <button class="carousel-btn left" onclick="moverCarrusel(this, -1)">&#8592;</button>
+        <div class="carousel-track">
+          <div class="producto-card"><img src="img/coca-cola-light.png" alt="Coca-Cola Light"><h3>Coca-Cola Light</h3><p>El sabor de Coca-Cola con menos calorías.</p><span class="precio">Q8.00</span></div>
+          <div class="producto-card"><img src="img/coca-cola-zero.png" alt="Coca-Cola Zero"><h3>Coca-Cola Zero</h3><p>Todo el sabor, cero azúcar.</p><span class="precio">Q8.00</span></div>
+          <div class="producto-card"><img src="img/fanta-zero.jpeg" alt="Fanta Zero"><h3>Fanta Zero</h3><p>Fanta sin azúcar.</p><span class="precio">Q7.50</span></div>
+          <div class="producto-card"><img src="img/sprite-zero.png" alt="Sprite Zero"><h3>Sprite Zero</h3><p>Sprite sin calorías.</p><span class="precio">Q7.50</span></div>
+          <div class="producto-card"><img src="img/kinley-zero.webp" alt="Kinley Zero"><h3>Kinley Zero</h3><p>Agua tónica sin azúcar.</p><span class="precio">Q8.00</span></div>
+          <div class="producto-card"><img src="img/fresca-zero.webp" alt="Fresca Zero"><h3>Fresca Zero</h3><p>Fresca sin calorías.</p><span class="precio">Q7.00</span></div>
+          <div class="producto-card"><img src="img/agua-light.jpg" alt="Agua Light"><h3>Agua Light</h3><p>Agua con sabor, sin azúcar.</p><span class="precio">Q6.00</span></div>
+        </div>
+        <button class="carousel-btn right" onclick="moverCarrusel(this, 1)">&#8594;</button>
+      </div>
+
+      <!-- Categoría: Energéticas -->
+      <h2 class="categoria-titulo">Energéticas</h2>
+      <div class="carousel-container">
+        <button class="carousel-btn left" onclick="moverCarrusel(this, -1)">&#8592;</button>
+        <div class="carousel-track">
+          <div class="producto-card"><img src="img/monster-energy.png" alt="Monster Energy"><h3>Monster Energy</h3><p>Bebida energética potente.</p><span class="precio">Q12.00</span></div>
+          <div class="producto-card"><img src="img/powerade.webp" alt="Powerade"><h3>Powerade</h3><p>Bebida hidratante con electrolitos.</p><span class="precio">Q10.00</span></div>
+          <div class="producto-card"><img src="img/redbull.png" alt="Red Bull"><h3>Red Bull</h3><p>Te da alas.</p><span class="precio">Q13.00</span></div>
+          <div class="producto-card"><img src="img/vive100.png" alt="Vive 100"><h3>Vive 100</h3><p>Energía instantánea.</p><span class="precio">Q9.00</span></div>
+          <div class="producto-card"><img src="img/volt.png" alt="Volt"><h3>Volt</h3><p>Recarga tu energía.</p><span class="precio">Q8.50</span></div>
+          <div class="producto-card"><img src="img/rockstar.png" alt="Rockstar"><h3>Rockstar</h3><p>Para los más activos.</p><span class="precio">Q12.00</span></div>
+          <div class="producto-card"><img src="img/gatorade.png" alt="Gatorade"><h3>Gatorade</h3><p>Hidratación deportiva.</p><span class="precio">Q9.50</span></div>
+        </div>
+        <button class="carousel-btn right" onclick="moverCarrusel(this, 1)">&#8594;</button>
+      </div>
+
+      <!-- Tabla comparativa -->
+      <h2 class="categoria-titulo">Comparativo de Productos</h2>
+      <div class="tabla-responsive">
+        <table class="tabla-comparativa">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Tipo</th>
+              <th>Presentación</th>
+              <th>Calorías (por 355ml)</th>
+              <th>Azúcar</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Coca-Cola Original</td>
+              <td>Bebida</td>
+              <td>Lata 355ml</td>
+              <td>140</td>
+              <td>35g</td>
+              <td>Q8.00</td>
+            </tr>
+            <tr>
+              <td>Coca-Cola Light</td>
+              <td>Dietética</td>
+              <td>Lata 355ml</td>
+              <td>0</td>
+              <td>0g</td>
+              <td>Q8.00</td>
+            </tr>
+            <tr>
+              <td>Coca-Cola Zero</td>
+              <td>Dietética</td>
+              <td>Lata 355ml</td>
+              <td>0</td>
+              <td>0g</td>
+              <td>Q8.00</td>
+            </tr>
+            <tr>
+              <td>Fanta Naranja</td>
+              <td>Bebida</td>
+              <td>Lata 355ml</td>
+              <td>160</td>
+              <td>44g</td>
+              <td>Q7.50</td>
+            </tr>
+            <tr>
+              <td>Fanta Zero</td>
+              <td>Dietética</td>
+              <td>Lata 355ml</td>
+              <td>0</td>
+              <td>0g</td>
+              <td>Q7.50</td>
+            </tr>
+            <tr>
+              <td>Sprite</td>
+              <td>Bebida</td>
+              <td>Lata 355ml</td>
+              <td>140</td>
+              <td>38g</td>
+              <td>Q7.50</td>
+            </tr>
+            <tr>
+              <td>Sprite Zero</td>
+              <td>Dietética</td>
+              <td>Lata 355ml</td>
+              <td>0</td>
+              <td>0g</td>
+              <td>Q7.50</td>
+            </tr>
+            <tr>
+              <td>Fresca</td>
+              <td>Bebida</td>
+              <td>Lata 355ml</td>
+              <td>150</td>
+              <td>40g</td>
+              <td>Q7.00</td>
+            </tr>
+            <tr>
+              <td>Fresca Zero</td>
+              <td>Dietética</td>
+              <td>Lata 355ml</td>
+              <td>0</td>
+              <td>0g</td>
+              <td>Q7.00</td>
+            </tr>
+            <tr>
+              <td>Agua Cristal</td>
+              <td>Agua</td>
+              <td>Botella 600ml</td>
+              <td>0</td>
+              <td>0g</td>
+              <td>Q5.00</td>
+            </tr>
+            <tr>
+              <td>Kinley</td>
+              <td>Agua tónica</td>
+              <td>Lata 355ml</td>
+              <td>90</td>
+              <td>23g</td>
+              <td>Q8.00</td>
+            </tr>
+            <tr>
+              <td>Kinley Zero</td>
+              <td>Agua tónica dietética</td>
+              <td>Lata 355ml</td>
+              <td>0</td>
+              <td>0g</td>
+              <td>Q8.00</td>
+            </tr>
+            <tr>
+              <td>Powerade</td>
+              <td>Bebida deportiva</td>
+              <td>Botella 500ml</td>
+              <td>80</td>
+              <td>21g</td>
+              <td>Q10.00</td>
+            </tr>
+            <tr>
+              <td>Monster Energy</td>
+              <td>Energética</td>
+              <td>Lata 473ml</td>
+              <td>210</td>
+              <td>54g</td>
+              <td>Q12.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => { document.getElementById('header').innerHTML = data; });
+
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => { document.getElementById('footer').innerHTML = data; });
+
+    function moverCarrusel(btn, dir) {
+      const track = btn.parentElement.querySelector('.carousel-track');
+      const card = track.querySelector('.producto-card');
+      const cardWidth = card.offsetWidth + parseInt(getComputedStyle(track).gap || 32);
+      track.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+.productos-section {
+  max-width: 1100px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+}
+
+.productos-section h1 {
+  color: #e41a1c;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.2em;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.categoria-titulo {
+  color: #222;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.4em;
+  margin: 36px 0 18px 0;
+  letter-spacing: 1px;
+}
+
+.productos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.producto-card {
+  background: #f6f6f6;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #0001;
+  padding: 24px 20px 18px 20px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+
+.producto-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  background: #fff;
+}
+
+.producto-card h3 {
+  font-size: 1.15em;
+  color: #222;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.producto-card p {
+  color: #444;
+  font-size: 1em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.precio {
+  background: #e41a1c;
+  color: #fff;
+  border-radius: 8px;
+  padding: 6px 18px;
+  font-weight: 600;
+  font-size: 1.08em;
+  margin-top: 8px;
+}
+
+.tabla-responsive {
+  overflow-x: auto;
+  margin-top: 18px;
+}
+
+.tabla-comparativa {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px #0001;
+}
+
+.tabla-comparativa th, .tabla-comparativa td {
+  padding: 14px 12px;
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.tabla-comparativa th {
+  background: #e41a1c;
+  color: #fff;
+  font-size: 1.08em;
+  font-weight: 700;
+}
+
+.tabla-comparativa tr:nth-child(even) {
+  background: #f6f6f6;
+}
+
+@media (max-width: 900px) {
+  .productos-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .producto-card {
+    width: 98vw;
+    max-width: 340px;
+  }
+}
+.productos-section {
+  max-width: 1100px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+}
+
+.productos-section h1 {
+  color: #e41a1c;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.2em;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.categoria-titulo {
+  color: #222;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.4em;
+  margin: 36px 0 18px 0;
+  letter-spacing: 1px;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.carousel-btn {
+  background: #e41a1c;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin: 0 8px;
+  transition: background 0.2s;
+  z-index: 2;
+  box-shadow: 0 2px 8px #0002;
+}
+.carousel-btn:hover {
+  background: #c11b1d;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 32px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+  /* Para que solo se vean 3 tarjetas a la vez */
+  max-width: 860px;
+}
+
+.producto-card {
+  background: #f6f6f6;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #0001;
+  padding: 24px 20px 18px 20px;
+  width: 240px;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+
+.producto-card img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  background: #fff;
+}
+
+.producto-card h3 {
+  font-size: 1.08em;
+  color: #222;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.producto-card p {
+  color: #444;
+  font-size: 0.98em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.precio {
+  background: #e41a1c;
+  color: #fff;
+  border-radius: 8px;
+  padding: 6px 18px;
+  font-weight: 600;
+  font-size: 1.08em;
+  margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .carousel-track {
+    max-width: 98vw;
+    gap: 16px;
+  }
+  .producto-card {
+    width: 180px;
+    min-width: 180px;
+  }
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2em;
+  }
+}

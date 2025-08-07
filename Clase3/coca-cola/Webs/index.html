@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Coca-Cola | Inicio</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css"> 
+  <link rel="stylesheet" href="css/carrusel.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <div class="banner">
+  <img src="img\bannercola.jpg" alt="Banner Coca-Cola">
+</div>
+
+    <div class="carousel">
+  <div class="carousel-track">
+    <img src="img\coca1.webp" alt="Coca-Cola 1" class="carousel-img">
+    <img src="img/coca2.jpg" alt="Coca-Cola 2" class="carousel-img">
+    <img src="img/coca3.webp" alt="Coca-Cola 3" class="carousel-img">
+    <!-- Agrega más imágenes si quieres -->
+  </div>
+  <button class="carousel-btn prev">&#10094;</button>
+  <button class="carousel-btn next">&#10095;</button>
+  <div class="carousel-dots"></div>
+</div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    // Cargar el header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+
+      })
+      .catch(error => console.error('Error al cargar el header:', error));
+
+    // Cargar el footer
+   // Cargar el footer
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+
+    // Aquí va el código del newsletter, porque el footer ya está en el DOM
+    const form = document.getElementById('newsletterForm');
+    const email = document.getElementById('newsletterEmail');
+    const success = document.getElementById('newsletterSuccess');
+    const againBtn = document.getElementById('newsletterAgain');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      success.style.display = 'block';
+    });
+
+    againBtn.addEventListener('click', function() {
+      form.reset();
+      form.style.display = 'flex';
+      success.style.display = 'none';
+      email.focus();
+    });
+  })
+  .catch(error => console.error('Error al cargar el footer:', error));
+  </script>
+  <script src="Scripts/carrusel.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Coca-Cola | Nosotros</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/nosotros.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div id="header"></div>
+<div class="proposito-container">
+  <span class="proposito-title fade-in-down">PROPÓSITO</span>
+  <div class="slogan-banner">
+    Refrescar al mundo en cualquier momento,<br>en cualquier lugar.
+  </div>
+</div>
+  <main>
+
+
+    <!-- Misión -->
+    <section class="mv-section">
+      <div class="mv-block fade-in-up">
+        <div class="mv-img">
+          <img src="img/mision.jpg" alt="Misión Coca-Cola">
+        </div>
+        <div class="mv-text">
+          <h3>MISIÓN</h3>
+          <p>Satisfacer con excelencia a los consumidores de bebidas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visión -->
+    <section class="mv-section mv-section-alt">
+      <div class="mv-block fade-in-up">
+        <div class="mv-text">
+          <h3>VISIÓN</h3>
+          <p>
+            <span class="mv-bar"></span>
+            Ser la plataforma comercial preferida de nuestros clientes y socios y un aliado de su crecimiento, promoviendo un futuro sostenible.
+          </p>
+        </div>
+        <div class="mv-img">
+          <img src="img/vision.jpg" alt="Visión Coca-Cola">
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería de imágenes histórica -->
+    <section class="galeria">
+<CENTER><h2>Galería Histórica</h2></CENTER>
+      <div class="galeria-imagenes">
+        <img src="img/historia1.webp" alt="Coca-Cola antigua 1" class="fade-in-up">
+        <img src="img/historia2.webp" alt="Coca-Cola antigua 2" class="fade-in-up">
+        <img src="img/historia3.png" alt="Coca-Cola antigua 3" class="fade-in-up">
+        <img src="img/historia4.webp" alt="Coca-Cola antigua 4" class="fade-in-up">
+        <!-- Agrega más imágenes si lo deseas -->
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script>
+    // Cargar el header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      })
+      .catch(error => console.error('Error al cargar el header:', error));
+
+    // Cargar el footer y activar newsletter si existe
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+
+        // Newsletter JS (si tu footer lo tiene)
+        const form = document.getElementById('newsletterForm');
+        if (form) {
+          const email = document.getElementById('newsletterEmail');
+          const success = document.getElementById('newsletterSuccess');
+          const againBtn = document.getElementById('newsletterAgain');
+
+          form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            form.style.display = 'none';
+            success.style.display = 'block';
+          });
+
+          againBtn.addEventListener('click', function() {
+            form.reset();
+            form.style.display = 'flex';
+            success.style.display = 'none';
+            email.focus();
+          });
+        }
+      })
+      .catch(error => console.error('Error al cargar el footer:', error));
+
+    // Animación de aparición al hacer scroll
+    function revealOnScroll() {
+      const elements = document.querySelectorAll('.fade-in-up');
+      const windowHeight = window.innerHeight;
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < windowHeight - 60) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('DOMContentLoaded', revealOnScroll);
+  </script>
+</body>
+</html>

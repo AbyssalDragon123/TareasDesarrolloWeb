@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Noticias | Coca-Cola</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/noticias.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+<section class="noticias-section">
+  <h1>Noticias</h1>
+
+  <!-- Noticia 1: imagen izquierda -->
+  <div class="noticia-stack">
+    <div class="noticia-bg"></div>
+    <div class="noticia-card">
+      <img src="img/noticia1.jpg" alt="Noticia 1">
+      <div class="noticia-contenido">
+        <h2>Nueva campaña global de Coca-Cola</h2>
+        <p class="noticia-resumen">
+          Coca-Cola lanza su nueva campaña “Siente el sabor” en más de 50 países, celebrando la alegría de compartir.
+        </p>
+        <button class="leer-mas-btn" onclick="mostrarNoticia(this)">Leer más</button>
+        <div class="noticia-completa">
+          <p>
+            Coca-Cola ha presentado su campaña global “Siente el sabor”, que busca conectar a las personas a través de experiencias únicas y momentos de felicidad. La campaña incluye anuncios televisivos, eventos en vivo y una fuerte presencia en redes sociales. “Queremos que cada sorbo de Coca-Cola sea un recordatorio de los pequeños placeres de la vida”, afirmó el director de marketing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Noticia 2: imagen derecha -->
+  <div class="noticia-stack zigzag-derecha">
+    <div class="noticia-bg"></div>
+    <div class="noticia-card">
+      <div class="noticia-contenido">
+        <h2>Coca-Cola refuerza su compromiso con la sostenibilidad</h2>
+        <p class="noticia-resumen">
+          La compañía anuncia nuevas iniciativas para reducir el uso de plástico y aumentar el reciclaje en sus operaciones.
+        </p>
+        <p> <img src="img/noticia2.jpg" alt="Noticia 2">
+         </p>
+        <button class="leer-mas-btn" onclick="mostrarNoticia(this)">Leer más</button>
+        <div class="noticia-completa">
+          <p>
+            Como parte de su estrategia “Un Mundo sin Residuos”, Coca-Cola implementará envases 100% reciclables y promoverá campañas de recolección en comunidades locales. Además, la empresa invertirá en tecnologías limpias para reducir su huella ambiental y fomentar la economía circular.
+          </p>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+
+  <!-- Noticia 3: imagen izquierda -->
+  <div class="noticia-stack">
+    <div class="noticia-bg"></div>
+    <div class="noticia-card">
+      <img src="img/noticia3.png" alt="Noticia 3">
+      <div class="noticia-contenido">
+        <h2>Evento especial: Coca-Cola Music Experience</h2>
+        <p class="noticia-resumen">
+          El festival musical patrocinado por Coca-Cola regresa con artistas internacionales y experiencias interactivas para los fans.
+        </p>
+        <button class="leer-mas-btn" onclick="mostrarNoticia(this)">Leer más</button>
+        <div class="noticia-completa">
+          <p>
+            El Coca-Cola Music Experience 2024 reunirá a miles de jóvenes en un evento lleno de música, tecnología y diversión. Los asistentes podrán disfrutar de conciertos, zonas de gaming y actividades exclusivas, reafirmando el compromiso de la marca con la cultura juvenil.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <div id="footer"></div>
+  <script>
+    // Cargar header y footer (igual que en tus otras páginas)
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => { document.getElementById('header').innerHTML = data; });
+
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => { document.getElementById('footer').innerHTML = data; });
+
+    // Mostrar/ocultar contenido completo de la noticia
+    function mostrarNoticia(btn) {
+      const completa = btn.nextElementSibling;
+      if (completa.style.display === "block") {
+        completa.style.display = "none";
+        btn.textContent = "Leer más";
+      } else {
+        // Oculta otras noticias abiertas (si hay varias)
+        document.querySelectorAll('.noticia-completa').forEach(div => {
+          div.style.display = "none";
+          if (div.previousElementSibling && div.previousElementSibling.classList.contains('leer-mas-btn')) {
+            div.previousElementSibling.textContent = "Leer más";
+          }
+        });
+        completa.style.display = "block";
+        btn.textContent = "Leer menos";
+      }
+    }
+
+    // Animación de entrada para las tarjetas
+    function revealNoticias() {
+      const cards = document.querySelectorAll('.noticia-card');
+      const windowHeight = window.innerHeight;
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < windowHeight - 60) {
+          card.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealNoticias);
+    window.addEventListener('DOMContentLoaded', revealNoticias);
+  </script>
+</body>
+</html>
