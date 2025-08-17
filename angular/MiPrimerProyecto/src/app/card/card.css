@@ -1,0 +1,25 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url("https://www.lamagdalenadeproust.com/info/wp-content/uploads/2014/12/perritos.jpg");
+  background-size: cover;    /* asegúrate de escribirlo normal */
+  background-position: center;
+  border-radius: 50%;        /* mantiene forma circular */
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;      /* Permite que se formen varias filas */
+  gap: 20px;            /* Espacio entre cards */
+  justify-content: center; /* Centrado */
+}
+
+.example-card {
+  width: 400px;          /* Ancho fijo para que entren 3 por fila */
+}
+mat-card img {
+  height: 200px;      /* altura fija */
+  object-fit: cover;  /* recorta sin deformar */
+  width: 100%;        /* que ocupe todo el ancho del card */
+}

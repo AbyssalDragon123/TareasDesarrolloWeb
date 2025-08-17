@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "MiPrimerProyecto": {
+    "project": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -22,7 +22,6 @@
               }
             ],
             "styles": [
-              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "server": "src/main.server.ts",
@@ -59,10 +58,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "MiPrimerProyecto:build:production"
+              "buildTarget": "project:build:production"
             },
             "development": {
-              "buildTarget": "MiPrimerProyecto:build:development"
+              "buildTarget": "project:build:development"
             }
           },
           "defaultConfiguration": "development"
