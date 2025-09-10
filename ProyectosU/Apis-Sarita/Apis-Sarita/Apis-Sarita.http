@@ -1,0 +1,6 @@
+@Apis_Sarita_HostAddress = http://localhost:5111
+
+GET {{Apis_Sarita_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
