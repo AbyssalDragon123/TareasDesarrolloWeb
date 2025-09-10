@@ -1,0 +1,36 @@
+
+
+<mat-card class="pago-card">
+  <mat-card-header>
+    <mat-card-title>Registrar un Pago</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="pagar()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Motivo</mat-label>
+        <input matInput formControlName="motivo" placeholder="Escribe el motivo" required>
+        <mat-error *ngIf="form.get('motivo')?.hasError('required')">
+          Este campo es obligatorio.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Monto</mat-label>
+        <input matInput formControlName="monto" type="number" placeholder="Ingrese el monto" required>
+        <mat-error *ngIf="form.get('monto')?.hasError('required')">
+          Este campo es obligatorio.
+        </mat-error>
+        <mat-error *ngIf="form.get('monto')?.hasError('min')">
+          El monto debe ser mayor a 0.
+        </mat-error>
+      </mat-form-field>
+
+      <div class="acciones">
+        <button mat-flat-button color="primary" class="btn-pagar" type="submit" [disabled]="form.invalid">
+          Pagar
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

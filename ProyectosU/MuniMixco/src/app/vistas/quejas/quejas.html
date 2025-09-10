@@ -1,0 +1,40 @@
+<!-- quejas.html -->
+<div class="contenedor">
+  <h2>Lista de Empleados</h2>
+
+  <div class="acciones-superior">
+    <button class="btn btn-primary" (click)="nuevo()">Agregar nuevo empleado</button>
+  </div>
+
+  <div *ngIf="cargando">Cargando empleados...</div>
+
+  <table *ngIf="!cargando && empleados.length > 0" class="tabla">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Puesto</th>
+        <th>Edad</th>
+        <th>Salario</th>
+        <th style="width: 200px;">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of empleados">
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.nombre }}</td>
+        <td>{{ emp.puesto }}</td>
+        <td>{{ emp.edad }}</td>
+        <td>Q {{ emp.salario | number:'1.2-2' }}</td>
+        <td>
+          <button class="btn btn-warning" (click)="editar(emp)">Editar</button>
+          <button class="btn btn-danger" (click)="eliminar(emp)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!cargando && empleados.length === 0">
+    <p>No hay empleados registrados.</p>
+  </div>
+</div>

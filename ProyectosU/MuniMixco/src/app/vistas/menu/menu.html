@@ -1,0 +1,34 @@
+<mat-toolbar color="primary" class="navbar">
+  <!-- Logo e identidad -->
+  <div class="logo-container">
+    <mat-icon class="logo-icon">account_balance</mat-icon>
+    <span class="logo-text">MuniMixco</span>
+  </div>
+
+  <!-- Espaciador para empujar el menú a la derecha -->
+  <span class="spacer"></span>
+
+  <!-- Menú de navegación -->
+  <nav class="menu-items">
+    <button mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <mat-icon>home</mat-icon>
+      Inicio
+    </button>
+    <button mat-button routerLink="/multas" routerLinkActive="active">
+      <mat-icon>gavel</mat-icon>
+      Multas
+    </button>
+    <button mat-button routerLink="/pagos" routerLinkActive="active">
+      <mat-icon>payment</mat-icon>
+      Pagos.
+    </button>
+
+<button mat-button routerLink="/quejas" routerLinkActive="active">
+      <mat-icon>copyright</mat-icon>
+       Quejas
+    </button>
+  </nav>
+</mat-toolbar>
+
+<!-- Aquí se cargan las rutas hijas -->
+<router-outlet></router-outlet>

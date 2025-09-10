@@ -1,0 +1,64 @@
+/* Estilos principales del toolbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  height: 64px;
+  background-color: rgb(60, 145, 27);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Contenedor del logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Icono del logo */
+.logo-icon {
+  font-size: 32px;
+  color: #fff;
+}
+
+/* Texto del logo */
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Espaciador para separar el logo del menú */
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* Menú de navegación */
+.menu-items {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Botones del menú */
+.menu-items button {
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover */
+.menu-items button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+/* Ruta activa */
+.menu-items button.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}

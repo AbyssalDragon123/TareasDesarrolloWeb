@@ -1,0 +1,28 @@
+/* Importa Angular Material al inicio del archivo */
+@use '@angular/material' as mat;
+
+/* Aplica el tema Material 3 */
+html {
+  @include mat.theme((
+    color: (
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto, // Asegúrate de tener Roboto en index.html
+    density: 0,
+  ));
+}
+
+/* Estilos globales */
+body {
+  /* Color scheme del navegador */
+  color-scheme: light; /* usa "light dark" para seguir el SO */
+
+  /* Variables de Material para colores y fuentes */
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+  /* Reset del margin */
+  margin: 0;
+}
